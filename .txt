@@ -1,0 +1,100 @@
+for (let i = 0; i < data.length; i++) {
+      var dataArray = data[i];
+      let divEl = document.createElement("div");
+      contentEl.appendChild(divEl);
+
+      //create img tag and apply the src atr
+      let image = document.createElement("img");
+      image.src = dataArray.url;
+      divEl.appendChild(image);
+      // img end
+
+      // add question
+      let question = document.createElement("p");
+      question.textContent = dataArray.question;
+      divEl.appendChild(question);
+      // question end
+
+      //answer rendered on page
+      let answer = document.createElement("p");
+      answer.textContent = dataArray.answer;
+      divEl.appendChild(answer);
+
+      //create the answer buttons with value
+      let choiceArray = dataArray.choice;
+      for (let i = 0; i < choiceArray.length; i++) {
+        let answer = choiceArray[i];
+        answer = document.createElement("input");
+        answer.type = "submit";
+        answer.value = choiceArray[i];
+        answer.textContent = choiceArray[i];
+        divEl.appendChild(answer);
+      }
+    }
+    //witch button was clicked and read the value
+    $("input").on("click", (e) => {
+      let guessing = e.target.value;
+      //check guessing and answer
+      console.log(guessing);
+    });
+  }
+});
+
+
+
+
+
+  data.forEach((data) => {
+    /*  let divEl = document.createElement("div");
+    contentEl.appendChild(divEl); */
+    //create img tag and apply the src atr
+    /*   let image = document.createElement("img");
+    image.src = data.url;
+    divEl.appendChild(image); */
+    // img end
+    // add question
+    /* let question = document.createElement("p");
+    question.textContent = data.question;
+    divEl.appendChild(question); */
+    // question end
+    //answer rendered on page push answer to choice array
+    /* let answer = document.createElement("p");
+    answer.textContent = data.answer;
+    divEl.appendChild(answer); */
+    /* data.choice.push(data.answer);
+    var newChoiceArray = data.choice;
+    let rightAnswer = newChoiceArray.pop(); */
+    //create the answer buttons with value
+    /*  let choiceArray = data.choice;
+    choiceArray.forEach((choises) => {
+      let answer = choises;
+      answer = document.createElement("input");
+      answer.type = "submit";
+      answer.value = choises;
+      answer.textContent = choises;
+      divEl.appendChild(answer);
+    }); */
+  });
+
+
+
+
+
+  let submit = document.createElement("button");
+  submit.textContent = "Submit";
+  contentEl.appendChild(submit);
+  submit.addEventListener(
+    "click",
+    function () {
+      let score = 0;
+      for (let i = 0; i < data.length; i++) {
+        let answer = document.querySelector(
+          "input[name='question" + i + "']:checked"
+        ).value;
+        if (answer === data[i].answer) {
+          score++;
+        }
+      }
+      alert("Your score is " + score + "/" + data.length);
+    } // end of submit function
+  ); // end of submit event listener

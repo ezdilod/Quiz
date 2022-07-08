@@ -1,0 +1,52 @@
+body {
+  background-color: black;
+}
+
+#content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  width: 800px;
+  height: 100vh;
+}
+
+#content > div {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+img {
+  width: 50%;
+  height: auto;
+}
+p {
+  font-size: 1.5em;
+  color: white;
+}
+
+button {
+  padding: 5px;
+  margin: 5px;
+  width: 120px;
+  height: 30px;
+  font-size: 0.8em;
+  font-weight: bold;
+  background-color: #ffffff;
+  color: black;
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+}
+
+.false {
+  background-color: red;
+}
+
+.bingo {
+  background-color: green;
+}
