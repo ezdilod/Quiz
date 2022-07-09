@@ -59,3 +59,9 @@ button {
 .bingo {
   background-color: green;
 }
+
+.rightAnswer {
+  position: absolute;
+  color: white;
+  top: 0;
+}
