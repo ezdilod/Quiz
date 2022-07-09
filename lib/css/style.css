@@ -1,5 +1,8 @@
 body {
   background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #content {
@@ -15,7 +18,7 @@ body {
 #content > div {
   border-bottom: 1px solid #3291c0;
   border-radius: 5px;
-  width: 100%;
+  width: 100vw;
   display: flex;
   flex-wrap: wrap;
   margin-top: 50px;
@@ -38,7 +41,7 @@ p {
 
 button {
   padding: 5px;
-  margin: 5px;
+  margin: 5px 5px 40px 5px;
   width: 120px;
   height: 30px;
   font-size: 0.8em;
